@@ -1,6 +1,11 @@
-import re
+'''
+    Progama: La Calculadora Mágica
+    Autor: Christian Alves - Copiado de Nick G
+    Copyright: 2018
 
-# Una calculadora que hace algunas cosas interesantes
+'''
+
+import re
 
 # Definir funciones
 
@@ -15,10 +20,13 @@ def perform_math():
     global previous
     equation = ""
 
+    # Si existe algun cáculo anterior, usalo...
     if previous == 0:
         equation = input("Enter equation: ")
     else:
         equation = input(str(previous))
+
+    # Si el usuario sale del programa ->
     if equation == "quit":
         print("Goodbye Human")
         run = False
